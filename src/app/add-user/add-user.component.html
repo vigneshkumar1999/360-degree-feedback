@@ -1,0 +1,51 @@
+<div class="user">
+
+  <div class="add">
+    <h3 class="h3">Add User</h3>
+    <label class="label">Name</label>
+    <input type="name" placeholder="User Name" class="input" [(ngModel)]="data.name">
+    <label class="label">Email</label>
+    <input type="email" placeholder="User email"class="input" [(ngModel)]="data.email">
+    <label class="label">Password</label>
+    <input type="password" placeholder="Enter Password" class="input" [(ngModel)]="data.password">
+    <label class="label">Position</label>
+    <select [value]="null" class="select" [(ngModel)]="data.designation">
+         <!-- give position from designation -->
+         <option>---select---</option>
+       <option *ngFor="let pos of position" value={{pos}} >{{pos}}</option>
+    </select><br>
+    <label class="label">Status</label>  
+    <select [value]="null" class="select" [(ngModel)]="data.active">
+      <option>---select---</option>
+      <option [ngValue]="false">0</option>
+      <option [ngValue]="true">1</option>
+    </select><br>
+    <label class="label">Role</label> 
+    <select [value]="null" class="select" [(ngModel)]="data.role">
+      <option>---select---</option>
+      <option value="admin">admin</option>
+      <option value="user">user</option>
+    </select><br>
+    <label>Lead</label>
+    <select class="select" [value]="null" [(ngModel)]="data.lead">
+      <option></option>
+      <option *ngFor="let name of names" value={{name}}>{{name}}</option>
+    </select>
+    <button class="button" (click)="postEmployee()">Add</button>
+    </div>
+    
+    <div class="update">
+        <h3 class="h3">Update User</h3>
+        <label class="label">Name</label>
+        <input type="name" placeholder="Enter user name"  class="input" [(ngModel)]="alter.name">
+        <label class="label">Email</label>
+        <input type="name" placeholder="Enter user email"  class="input" [(ngModel)]="alter.email">
+        <label class="label">Status</label>
+        <select [value]="null" class="select" [(ngModel)]="alter.active">
+          <option></option>
+            <option [ngValue]="false">0</option>
+            <option [ngValue]="true">1</option>
+        </select><br>
+        <button class="button" (click)="alterEmployee()">Update</button>
+    </div>
+</div>

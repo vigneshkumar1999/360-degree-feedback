@@ -1,0 +1,9 @@
+
+
+<div class="add-designation">
+    <label class="label">DESIGNATION</label>
+    <br>
+    <input [(ngModel)]="designation" type="text" placeholder="Enter new Position" class="input">
+    <br>
+    <button  class="button" (click)="addDesignation()"[disabled]="!isValid()">Add Position</button>
+</div>

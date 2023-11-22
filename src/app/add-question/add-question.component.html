@@ -1,0 +1,43 @@
+<div class="questions">
+    <div class="add_questions">
+        <h3 class="h3">ADD QUESTION</h3>
+        <label class="label">Question</label>
+        <br>
+        <input type="text" placeholder="Enter Question" class="input" [(ngModel)]="add.question">
+        <br>
+        <label class="label">FeedBack</label>
+        <br>
+        <select class="select" [value]="null" [(ngModel)]="add.name">
+            <option></option>
+            <option *ngFor="let name of fname" value={{name}}>{{name}}</option>
+        </select>
+        <br>
+        <button class="button" (click)="addQuestion()">Add</button>
+    </div>
+    <div class="update_questions" >
+        <h3 class="h3">UPDATE QUESTION</h3>
+        <label class="label">Select Feedback</label>
+        <br>
+        <select id="update"   [value]="null" class="select" (change)="getQuestions($event)" [(ngModel)]="alter.name">
+            <option></option>
+            <option *ngFor="let name of fname" value={{name}}>{{name}}</option>
+        </select>
+        <br>
+
+        <label class="label">Select Question</label>
+        <br>
+        <select [value]="null" class="select" [(ngModel)]="alter.question">
+            <option></option>
+            <option *ngFor="let question of questions" value={{question}}>{{question}}</option>
+        </select>
+        <br>
+        <label class="label">Status</label>
+        <br>
+        <select [value]="null" class="select" [(ngModel)]="alter.status">
+        <option [ngValue]="false">0</option>
+        <option [ngValue]="true">1</option>
+        </select>
+        <br>
+        <button class="button" (click)="alterQuestion()">Update</button>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<p>register works!</p>
+
+<div class="register">
+<label>Name</label>
+<br>
+<input type="text" placeholder="Enter Your Name" [(ngModel)]="data.name">
+<br>
+<label>Email</label>
+<br>
+<input type="text" placeholder="Enter your Mail" [(ngModel)]="data.email">
+<br>
+<label>Password</label>
+<br>
+<input type="password" placeholder="Enter your password" [(ngModel)]="data.password">
+<br>
+<button (click)="registerFunc()">Register</button>
+<p>To login Click here <a routerLink="\register">Login</a></p>
+</div>

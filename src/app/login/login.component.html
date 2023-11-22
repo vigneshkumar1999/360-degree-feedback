@@ -1,0 +1,14 @@
+<p>login works!</p>
+
+<div class="login">
+<label>Email</label>
+<br>
+<input type="email" placeholder="Enter user email" [(ngModel)]="data.email">
+<br>
+<label>Password</label>
+<br>
+<input type="password" placeholder="Enter user password" [(ngModel)]="data.password">
+<br>
+<button (click)="login()">Login</button>
+<p>To register Click here <a routerLink="/login">Register</a></p>
+</div>

@@ -1,0 +1,25 @@
+<p>request-feedback works!</p>
+
+<div class="request-feedback">
+<label>Feedback Requester </label>
+<br>
+<select (change)="clickfunc($event)">
+    <option></option>
+    <option *ngFor="let n of name" value={{n}} >{{n}}</option>
+</select>
+<br>
+<label>Feedback Provider</label>
+<br>
+<select>
+    <option></option>
+    <option></option>
+</select>
+<br>
+<label>FeedBack</label>
+<br>
+<select>
+    <option></option>
+    <option *ngFor="let fb of feedback" value={{fb}}>{{fb}}</option>
+</select>
+<br>
+</div>

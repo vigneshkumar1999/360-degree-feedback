@@ -1,0 +1,51 @@
+.questions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.add_questions{
+    border-radius: 5px;
+    border-color: white;
+    border-style: solid;
+    margin-top: 200px;
+    width: 300px;
+    margin-left: 100px;
+    background-color: black;
+    color: white;
+}
+.update_questions{
+    border-radius: 5px;
+    border-color: white;
+    border-style: solid;
+    margin-top: 200px;
+    width: 300px;
+    margin-left: 100px;
+    background-color: black;
+    color: white;
+}
+
+.h3{
+    margin-left:55px;
+    padding:5px;
+    margin-top: 10px;
+}
+.label{
+    margin-left: 80px;
+    padding: 5px;
+    margin-top: 10px;
+}
+.input{
+    margin-left: 40px;
+    padding:5px;
+    margin-top: 10px;
+}
+.select{
+    margin-left:80px;
+    padding: 5px;
+    margin-top: 10px;
+}
+.button{
+    margin-left: 75px;
+    padding: 5px;
+    
+}
